@@ -1,0 +1,18 @@
+Step 1: Install Dependencies
+Make sure you have Python installed on your system. Open a terminal or command prompt and run the following commands to install the required Python packages:
+terminal: pip install streamlit pytesseract transformers pillow datasets
+Additionally, ensure you have Tesseract OCR installed on your machine. You can download it from Tesseract GitHub or use package managers like apt on Ubuntu or brew on macOS.
+Step 2: Download Models
+Run the following commands to download the required NLP models:
+terminal: 
+transformers-cli repo info distilbert-base-cased-distilled-squad
+transformers-cli repo info gpt2
+Step 3: Set Tesseract Path
+Update the pytesseract.pytesseract.tesseract_cmd variable in the code with the correct path to your Tesseract OCR executable. Modify this line:
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
+Ensure the path is correct for your system.
+Step 4: Run the Program
+Save the provided code in a file, e.g., chat.py. 
+Open a terminal or command prompt in the directory containing the script and run:
+Terminal:  streamlit run document_search_chat.py
+This command will start a local development server and open the application in your default web browser. You can interact with the document search and chat system through the provided interfaces.
